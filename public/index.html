@@ -46,7 +46,7 @@
         </p>
         <!-- PI -->
         <h2 style="margin-left: 65%; position:absolute">Infinite Digits of PI:</h2>
-        <div style="width: 30%; margin-left: 65%; margin-top:5%; position:absolute"><div id="pi"></div><div>...</div>
+        <div style="width: 30%; margin-left: 65%; margin-top:5%; position:absolute; overflow-y: scroll; height: 405px; border: solid thin"><div id="pi"></div><div>...</div>
 
             <script async defer>
             function bi(n, b) { return new jsbn.BigInteger(n.toString(), b ? b : 10); };
