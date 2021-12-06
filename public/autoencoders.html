@@ -1,0 +1,99 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Auto Encoders Blog Post</title>
+    <link rel="stylesheet" href="styles1.css">
+
+</head>
+
+<body>
+
+    <div>
+        <div>
+            <h1>What is an Auto Encoder?</h1>
+
+            <p>A simple (and minimalist) neural network architecture that efficiently trains in an unsupervised manner.
+                Such architectures consist of two main parts: an encoder—which compresses the input and converts it into
+                code-readble data, and a decoder—which given the output from the encoder, makes a best attempt to
+                reconstruct the input data as close as possible. For example, provided as input an image from the MNIST
+                dataset (as shown below on the left), an auto encoder might produce the compressed representation of
+                that image (on the right). </p>
+
+            <img src="./images/img1.png">
+
+            <p>The encoder and decoder layers of auto encoders act just as those in a more complicated neural network
+                architecture—they are comprised of nodes that receive input and produce output and each have associated
+                weights. After once the decoder has made an attempt at reconstructing the input data the error is
+                measured between the input and output, just as is the case with networks that rely on supervised
+                learning. The difference here is that rather than having labeled data, the loss is measured between the
+                initial input and the compressed and reconfigured output based on this input. In this way, auto encoders
+                act essentially as single perceptrons of a neural network—in fact they were just an early use case of
+                “shallow-learning” neural networks. </p>
+        </div>
+
+
+        <div>
+            <h1>Use cases and strengths</h1>
+
+            <p>While similar to individual perceptrons of modern deep learning neural networks, auto encoders have some
+                distinct use-cases. By compressing the data rather than completely preserving it, auto encoders perform
+                particularly well at highlighting the most “important” aspects of provided data while ignoring any
+                outliers and noise. This makes auto encoders especially useful in feature detection and primitive
+                classification. In fact, early deep learning architectures utilized auto encoders as the initial layers
+                of neural networks in order to increase their efficiency. Other important uses of auto encoders are as
+                follows:</p>
+
+            <ul>
+                <li>Dimensionality reduction: By highlighting the most correlated and distinctive features of a given
+                    piece of data, auto encoders perform well at reducing the dimensionality of inputs. This allows auto
+                    encoders to accurately classify between binary categories. </li>
+
+                <li>Hashing: When working with data at the lowest possible level (binary encodings) auto encoders can be
+                    used to classify groups of equivalent hash codes. This can allow data retrieval to perform more
+                    efficiently.</li>
+
+                <li>Anomaly detection: When trying to sift through large datasets, auto encoders are extremely accurate
+                    at predicting data points that do not belong, i.e. are not of the same form and structure, of other
+                    data points. This is useful in cleaning datasets of incorrectly placed data.</li>
+
+                <li>Image processing: As seen above with the MNIST example, auto encoders easily compress input and then
+                    reconstruct the most important aspects of it. This has proven useful in the cleaning of medical
+                    images to remove distracting and unnecessary noise.</li>
+            </ul>
+        </div>
+
+        <div>
+            <h1>Code Example</h1>
+
+            <p>Below is example code for an encoder using modern deep-learning technologies such as TensorFlow</p>
+            <img src="./images/img2.png">
+        </div>
+
+        <div>
+            <h1>Further Reading</h1>
+            <ul>
+                <li><a href="https://www.deeplearningbook.org/"> Deep Learning: MIT textbook</a></li>
+                <li><a href="https://hal.archives-ouvertes.fr/hal-00271141">HAL image denoising</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h1>Sources</h1>
+            <ul>
+                <li><a
+                        href="https://towardsdatascience.com/auto-encoder-what-is-it-and-what-is-it-used-for-part-1-3e5c6f017726">Towards
+                        Data Science</a></li>
+                <li><a href="https://blog.keras.io/building-autoencoders-in-keras.html">Python Code</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
